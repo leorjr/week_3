@@ -16,4 +16,13 @@ const calculoMedia = () =>{
     alert(`O valor total é ${total}`)
 }
 
-calculoMedia()
+const calculoIMC = () =>{
+    const userAltura = Number(prompt(`Informe a altura: `))
+    const userPeso = Number(prompt(`Informe o peso: `))
+
+    const resultado = userPeso / (userAltura * userAltura)
+
+    alert(`o seu IMC é: ${resultado.toFixed(1)}`)
+}
+
+calculoIMC()
