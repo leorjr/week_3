@@ -25,4 +25,21 @@ const calculoIMC = () =>{
     alert(`o seu IMC é: ${resultado.toFixed(1)}`)
 }
 
-calculoIMC()
+class Aluno{
+    nome = '';
+    idade = '';
+
+    constructor(nome, idade){
+        this.nome = nome;
+        this.idade = idade
+    }
+}
+
+const cadastroAluno = () =>{
+    const nome = prompt('Informe o nome do aluno: ')
+    const idade = Number(prompt('Informe a idade do aluno: '))
+
+    const aluno = new Aluno(nome, idade)
+
+    console.log(aluno)
+}
