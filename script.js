@@ -70,3 +70,26 @@ const mediaPonderada = () =>{
 
     console.log(mediaPonderada)
 }
+
+class Pessoa{
+    nome = ''
+    sobrenome = ''
+
+    constructor(nome, sobrenome){
+        this.nome = nome
+        this.sobrenome = sobrenome
+    }
+
+    apresentarNomeComSobrenome(){
+        return console.log(`${this.nome} ${this.sobrenome}`)
+    }
+}
+
+const concatenacao = () =>{
+
+    const nome = prompt('Informe o nome: ')
+    const sobrenome = prompt('Informe o sobrenome: ')
+
+    const pessoa = new Pessoa(nome, sobrenome)
+    pessoa.apresentarNomeComSobrenome()
+}
