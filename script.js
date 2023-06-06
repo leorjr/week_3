@@ -43,3 +43,30 @@ const cadastroAluno = () =>{
 
     console.log(aluno)
 }
+
+const mediaPonderada = () =>{
+    let dados = []
+
+    for(let i = 1; i < 4; i ++){
+        const nota = Number(prompt('Informe a nota: '))
+        const peso = Number(prompt('Informe o peso da nota: '))
+
+        dados.push({nota, peso})
+    }
+
+    dados.forEach(dado =>{
+        let notaComPeso = dado.nota * dado.peso
+        dado.notaComPeso = notaComPeso
+    })
+
+    let total = 0
+    let totalpesos = 0
+    dados.forEach(dado =>{
+        total += dado.notaComPeso
+        totalpesos += dado.peso
+    })
+
+    const mediaPonderada = total / totalpesos
+
+    console.log(mediaPonderada)
+}
